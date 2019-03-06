@@ -5,6 +5,8 @@ import TaxesFees from "./components/TaxesFees";
 import EstimatedTotal from "./components/EstimatedTotal";
 import ItemDetails from "./components/ItemDetails";
 import PromoCode from "./components/PromoCode";
+import { connect } from "react-redux";
+import { handleChange } from "./actions/promoCodeActions";
 import "./App.css";
 
 class App extends Component {
@@ -15,6 +17,33 @@ class App extends Component {
     estimatedTotal: 0,
     disablePromoButton: false
   };
+
+  componentDidMount = () => {
+    this.setState(
+      {
+        taxes: (this.state.total + this.state.pickupSavings) * 0.0875
+      },
+      () =>
+        this.setState({
+          estimatedTotal:
+            this.state.total + this.state.pickupSavings + this.state.taxes
+        })
+    );
+  };
+
+  giveDiscountHandler = () => {
+    if (this.props.promoCode === "DISCOUNT") {
+      this.setState(
+        { estimatedTotal: this.state.estimatedTotal * 0.9 },
+        function() {
+          this.setState({
+            disablePromoButton: true
+          });
+        }
+      );
+    }
+  };
+
   render() {
     const {
       total,
@@ -29,13 +58,13 @@ class App extends Component {
           <h3>Purchase App</h3>
           <SubTotal price={total.toFixed(2)} />
           <PickUpSavings price={pickupSavings} />
-          <TaxesFees taxes={taxes} />
+          <TaxesFees taxes={taxes.toFixed(2)} />
           <hr />
           <EstimatedTotal price={estimatedTotal.toFixed(2)} />
           <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
           <hr />
           <PromoCode
-            giveDisount={() => this.giveDiscountHandler()}
+            giveDiscount={() => this.giveDiscountHandler()}
             isDisabled={disablePromoButton}
           />
         </div>
@@ -44,4 +73,13 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  promoCode: state.promoCode.value
+});
+
+export default connect(
+  mapStateToProps,
+  {
+    handleChange
+  }
+)(App);
