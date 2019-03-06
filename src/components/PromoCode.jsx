@@ -20,7 +20,7 @@ export default class PromoCode extends Component {
           onClick={() => this.setState({ open: !open })}
         >
           {this.state.open === false ? `+` : `-`}
-          Promo Code
+          {this.state.open === false ? `See` : `Hide`} Promo Code
           {this.state.open === false ? `+` : `-`}
         </Button>
         <Collapse in={open}>

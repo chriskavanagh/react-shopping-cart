@@ -16,7 +16,13 @@ class App extends Component {
     disablePromoButton: false
   };
   render() {
-    const { total, pickupSavings, taxes, estimatedTotal } = this.state;
+    const {
+      total,
+      pickupSavings,
+      taxes,
+      estimatedTotal,
+      disablePromoButton
+    } = this.state;
     return (
       <div className="container d-flex justify-content-center">
         <div className="purchase-card">
@@ -30,7 +36,7 @@ class App extends Component {
           <hr />
           <PromoCode
             giveDisount={() => this.giveDiscountHandler()}
-            isDisabled={this.state.disablePromoButton}
+            isDisabled={disablePromoButton}
           />
         </div>
       </div>
