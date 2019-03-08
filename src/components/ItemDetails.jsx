@@ -18,7 +18,6 @@ export default class ItemDetails extends Component {
           style={{ marginBottom: "10px" }}
           className="item-details-button"
           aria-controls="example-collapse-text"
-          example-collapse-text={open}
           variant="link"
           onClick={() => this.setState({ open: !open })}
         >
