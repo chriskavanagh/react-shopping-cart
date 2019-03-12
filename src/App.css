@@ -45,3 +45,19 @@ hr {
 .promo-code-button {
   margin-bottom: 35px;
 }
+
+.btn-round {
+  border-radius: 10px !important;
+}
+
+input {
+  border-radius: 10px !important;
+}
+
+/* .active {
+  background: rgba(178, 89, 196, 0.596);
+} */
+
+.active-home {
+  background: grey;
+}

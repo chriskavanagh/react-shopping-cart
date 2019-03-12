@@ -5,10 +5,8 @@ import TaxesFees from "./components/TaxesFees";
 import EstimatedTotal from "./components/EstimatedTotal";
 import ItemDetails from "./components/ItemDetails";
 import PromoCode from "./components/PromoCode";
-import Posts from "./components/Posts";
 import { connect } from "react-redux";
 import { handleChange } from "./actions/promoCodeActions";
-import { Route, Switch } from "react-router-dom";
 import "./App.css";
 
 class Checkout extends Component {
@@ -35,10 +33,9 @@ class Checkout extends Component {
 
   giveDiscountHandler = () => {
     if (this.props.promoCode === "DISCOUNT") {
-      this.setState({ estimatedTotal: this.state.estimatedTotal * 0.9 }, () => {
-        this.setState({
-          disablePromoButton: true
-        });
+      this.setState({
+        estimatedTotal: this.state.estimatedTotal * 0.9,
+        disablePromoButton: true
       });
     }
   };

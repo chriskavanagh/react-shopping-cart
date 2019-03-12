@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Button, InputGroup, FormControl } from "react-bootstrap";
+import { Button, FormControl, Container } from "react-bootstrap";
 
 export default class Posts extends Component {
   state = {
@@ -26,7 +26,7 @@ export default class Posts extends Component {
   };
   render() {
     return (
-      <div>
+      <Container>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="name">
             Person Name:
@@ -34,7 +34,7 @@ export default class Posts extends Component {
           </label>
           <Button type="submit">Add</Button>
         </form>
-      </div>
+      </Container>
     );
   }
 }
