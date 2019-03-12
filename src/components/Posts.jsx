@@ -18,16 +18,21 @@ export default class Posts extends Component {
       name: this.state.name
     };
 
-    const response = await axios.post(
-      `https://jsonplaceholder.typicode.com/users`,
-      {
-        user
-      }
-    );
+    try {
+      const response = await axios.post(
+        `https://jsonplaceholder.typicode.com/users`,
+        {
+          user
+        }
+      );
 
-    console.log(response.data);
-    return response.data;
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   render() {
     return (
       <Container>
