@@ -62,6 +62,7 @@ input {
   background: grey;
 } */
 
-.ha:hover {
-  background: red;
+.li:hover {
+  background: #845007;
+  color: pink;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 /* const Link = styled(NavLink)`
   color: #fff;
@@ -20,7 +20,7 @@ export default function NavBar() {
           <NavLink
             exact
             to="/"
-            className="nav-link mx-3 ha"
+            className="nav-link mx-3 li"
             activeStyle={{
               background: "gray",
               fontWeight: "bold",
@@ -31,7 +31,7 @@ export default function NavBar() {
           </NavLink>
           <NavLink
             to="/posts"
-            className="nav-link mx-3 ha"
+            className="nav-link mx-3 li"
             activeStyle={{
               background: "gray",
               fontWeight: "bold",
@@ -42,7 +42,7 @@ export default function NavBar() {
           </NavLink>
           <NavLink
             to="/array"
-            className="nav-link mx-3 ha"
+            className="nav-link mx-3 li"
             activeStyle={{
               background: "gray",
               fontWeight: "bold",
