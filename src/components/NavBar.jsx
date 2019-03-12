@@ -20,7 +20,7 @@ export default function NavBar() {
           <NavLink
             exact
             to="/"
-            className="nav-link mx-3"
+            className="nav-link mx-3 ha"
             activeStyle={{
               background: "gray",
               fontWeight: "bold",
@@ -31,7 +31,7 @@ export default function NavBar() {
           </NavLink>
           <NavLink
             to="/posts"
-            className="nav-link mx-3"
+            className="nav-link mx-3 ha"
             activeStyle={{
               background: "gray",
               fontWeight: "bold",
@@ -42,7 +42,7 @@ export default function NavBar() {
           </NavLink>
           <NavLink
             to="/array"
-            className="nav-link mx-3"
+            className="nav-link mx-3 ha"
             activeStyle={{
               background: "gray",
               fontWeight: "bold",

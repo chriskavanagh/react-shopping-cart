@@ -58,6 +58,10 @@ input {
   background: rgba(178, 89, 196, 0.596);
 } */
 
-.active-home {
+/* .active-home {
   background: grey;
+} */
+
+.ha:hover {
+  background: red;
 }
