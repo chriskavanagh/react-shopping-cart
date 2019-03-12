@@ -22,9 +22,9 @@ export default function NavBar() {
             to="/"
             className="nav-link mx-3 li"
             activeStyle={{
-              background: "gray",
+              background: "yellow",
               fontWeight: "bold",
-              color: "white"
+              color: "blue"
             }}
           >
             Home
@@ -33,9 +33,9 @@ export default function NavBar() {
             to="/posts"
             className="nav-link mx-3 li"
             activeStyle={{
-              background: "gray",
+              background: "yellow",
               fontWeight: "bold",
-              color: "white"
+              color: "blue"
             }}
           >
             Posts
@@ -44,9 +44,9 @@ export default function NavBar() {
             to="/array"
             className="nav-link mx-3 li"
             activeStyle={{
-              background: "gray",
+              background: "yellow",
               fontWeight: "bold",
-              color: "white"
+              color: "blue"
             }}
           >
             Array
