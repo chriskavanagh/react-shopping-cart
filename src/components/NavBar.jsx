@@ -22,7 +22,7 @@ export default function NavBar() {
             to="/"
             className="nav-link mx-3 li"
             activeStyle={{
-              background: "yellow",
+              background: "#ffd700",
               fontWeight: "bold",
               color: "blue"
             }}
@@ -33,7 +33,7 @@ export default function NavBar() {
             to="/posts"
             className="nav-link mx-3 li"
             activeStyle={{
-              background: "yellow",
+              background: "#ffd700",
               fontWeight: "bold",
               color: "blue"
             }}
@@ -44,7 +44,7 @@ export default function NavBar() {
             to="/array"
             className="nav-link mx-3 li"
             activeStyle={{
-              background: "yellow",
+              background: "#ffd700",
               fontWeight: "bold",
               color: "blue"
             }}

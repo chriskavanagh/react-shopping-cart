@@ -12,26 +12,25 @@ export default class Posts extends Component {
     this.setState({ name: value });
   };
 
-  handleSubmit = async evt => {
+  handleSubmit = evt => {
+    evt.preventDefault();
+    const user = {
+      name: this.state.name
+    };
+    axios
+      .post(`https://jsonplaceholder.typicode.com/users`, { user })
+      .then(res => {
+        console.log(res.data);
+      });
+  };
+
+  /*handleSubmit = async evt => {
     evt.preventDefault();
     const user = {
       name: this.state.name
     };
 
-    /* handleSubmit = evt => {
-      evt.preventDefault();
-      const user = {
-        name: this.state.name
-      };
-      axios
-        .post(`https://jsonplaceholder.typicode.com/users`, { user })
-        .then(res => {
-          console.log(res.data);
-        });
-    };
-  } */
-
-    try {
+   try {
       const response = await axios.post(
         `https://jsonplaceholder.typicode.com/users`,
         {
@@ -44,7 +43,7 @@ export default class Posts extends Component {
     } catch (error) {
       console.error(error);
     }
-  };
+  }; */
 
   render() {
     return (
